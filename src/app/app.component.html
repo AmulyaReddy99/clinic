@@ -8,14 +8,18 @@
   <ng-sidebar [opened]="opened">
     <ul>
       <li>Near me</li>
-      <li>Graphs</li>
-      <li></li>
+      <li>Stats</li>
+      <li>Messages</li>
     </ul> 
   </ng-sidebar>
   <div ng-sidebar-content>
     <button (click)="toggleSidebar()">Open Sidebar</button>
   </div>
 </ng-sidebar-container>
+
+<app-details></app-details>
+<app-stats></app-stats>
+<app-messages></app-messages>
 
 <div class="content" role="main">
 
