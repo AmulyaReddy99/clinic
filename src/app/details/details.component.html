@@ -1,15 +1,15 @@
 <div class="filters">
+
     <select name="distance" class="filters">
-        <!-- foreach  -->
-        <option>1 km</option>
+        <option *ngFor="let info of distances; index as i; trackBy: get_distnaces">{{info}}</option>
     </select>
 
     <select name="status" class="filters">
-        <option>Open</option>
+        <option *ngFor="let info of status; index as i; trackBy: get_status">{{info}}</option>
     </select>
 
     <select name="clinic_type" class="filters">
-        <option>General</option>
+        <option *ngFor="let info of clinic_types; index as i; trackBy: get_clinic_types">{{info}}</option>
     </select>
 </div>
 
@@ -18,20 +18,18 @@
         <thead>
             <tr>
                 <th>Clinic name</th>
-                <th>Doctor name</th>
+                <th>Clinic type</th>
                 <th>Status</th>
                 <th>Ph. number</th>
                 <th>Address</th>
-                <th>Clinic type</th>
                 <th>Distance</th>
                 <th>Message</th>
             </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td></td>
+          <tr *ngFor="let row of clinic_info; index as i; trackBy: get_clinic_info">
+            <td *ngFor="let i of row">{{i}}</td>
+            <td><button class="btn btn-primary">Contact</button></td>
           </tr>
         </tbody>
       </table>
