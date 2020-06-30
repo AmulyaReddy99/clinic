@@ -13,7 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     DetailsComponent,
     StatsComponent,
-    MessagesComponent
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

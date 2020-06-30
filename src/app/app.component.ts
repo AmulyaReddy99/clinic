@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'clinic';
+  which_page = 'details'
   opened = true;
   toggleSidebar(){
     this.opened = !this.opened;
+  }
+  page(pg){
+    this.which_page = pg;
   }
 }

@@ -1,25 +1,30 @@
 <!-- Toolbar -->
 <nav class="navbar navbar-dark bg-dark">
-  <p style="color: aliceblue; margin: initial;">Clinic</p>
+  <p class="nav_content">Clinic</p>
 </nav>
 
 <!-- Sidebar -->
-<ng-sidebar-container>
-  <ng-sidebar [opened]="opened">
-    <ul>
-      <li>Near me</li>
-      <li>Stats</li>
-      <li>Messages</li>
-    </ul> 
-  </ng-sidebar>
-  <div ng-sidebar-content>
-    <button (click)="toggleSidebar()">Open Sidebar</button>
+<div>
+  <div class="row">
+    <div class="col-sm-3" >
+      <ng-sidebar-container>
+        <ng-sidebar [opened]="opened">
+          <button (click)="page('details')">Near me</button><br>
+          <button (click)="page('stats')">Stats</button><br>
+          <button (click)="page('messages')">Messages</button><br>
+        </ng-sidebar>
+        <div ng-sidebar-content>
+          <button (click)="toggleSidebar()">Open Sidebar</button>
+        </div>
+      </ng-sidebar-container>
+    </div>
+    <div class="col-sm-9">
+      <app-details *ngIf="which_page=='details'"></app-details>
+      <app-stats *ngIf="which_page=='stats'"></app-stats>
+      <app-messages *ngIf="which_page=='messages'"></app-messages>  
+    </div>
   </div>
-</ng-sidebar-container>
-
-<app-details></app-details>
-<app-stats></app-stats>
-<app-messages></app-messages>
+</div>
 
 <div class="content" role="main">
 
