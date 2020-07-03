@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocationApiService } from './location-api.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,10 @@ export class AppComponent {
   title = 'clinic';
   which_page = 'details'
   opened = true;
+
+  constructor(private location: LocationApiService){}
+
+  position = this.location.get_location();
 
   toggleSidebar(){
     this.opened = !this.opened;

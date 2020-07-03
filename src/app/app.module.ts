@@ -8,6 +8,7 @@ import { DetailsComponent } from './details/details.component';
 import { StatsComponent } from './stats/stats.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LocationApiService } from './location-api.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgxPaginationModule,
     SidebarModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    LocationApiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
