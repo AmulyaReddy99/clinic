@@ -16,11 +16,11 @@ export class MessagesComponent implements OnInit {
   current_name = ''
   
   messages = {
-    'Rachana': ['Hello.. Hw r ya?','cool','hw is it in bangalore','fine','how about hitachi?'],
-    'Sreevani': ['I am fine..','cool','hw is jpmc','good'],
-    'Taruni': ['Happy birthday bro!'],
-    'Rajendra': ['Ok'],
-    'Pranav': ['Met charan yesterday','nice']
+    'C1': ['Hello.. Hw r ya?????? how r u doing.. hw is it in bangalore.. so long..!','cool','fine','how about hitachi?'],
+    'C2': ['I am fine..','cool','hw is jpmc','good'],
+    'C3': ['Happy birthday bro!'],
+    'C4': ['Ok'],
+    'C5': ['Met charan yesterday','nice']
   }
 
   set_current_name(name){

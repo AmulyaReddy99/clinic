@@ -12,6 +12,8 @@ export class DetailsComponent implements OnInit {
   clinic_types = [];
   distances = ["1 km","2 km","5 km"];
   clinic_info = [];
+  total_pages = 0;
+  p = 1;
   
   constructor() { 
     
@@ -36,6 +38,7 @@ export class DetailsComponent implements OnInit {
           this.clinic_types.push(type);
       }
     }
+    this.total_pages = c;
     console.log(this.clinic_info);
   }
 

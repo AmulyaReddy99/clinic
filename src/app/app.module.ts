@@ -7,6 +7,7 @@ import { SidebarModule } from 'ng-sidebar';
 import { DetailsComponent } from './details/details.component';
 import { StatsComponent } from './stats/stats.component';
 import { MessagesComponent } from './messages/messages.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MessagesComponent } from './messages/messages.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxPaginationModule,
     SidebarModule.forRoot()
   ],
   providers: [],

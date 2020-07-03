@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'clinic';
   which_page = 'details'
   opened = true;
+
   toggleSidebar(){
     this.opened = !this.opened;
   }

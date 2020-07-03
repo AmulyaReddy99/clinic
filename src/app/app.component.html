@@ -9,9 +9,9 @@
     <div class="col-sm-3" >
       <ng-sidebar-container>
         <ng-sidebar [opened]="opened">
-          <button (click)="page('details')">Near me</button><br>
-          <button (click)="page('stats')">Stats</button><br>
-          <button (click)="page('messages')">Messages</button><br>
+          <p (click)="page('details')">Near me</p><br>
+          <p (click)="page('stats')">Stats</p><br>
+          <p (click)="page('messages')">Messages</p><br>
         </ng-sidebar>
         <div ng-sidebar-content>
           <button (click)="toggleSidebar()">Open Sidebar</button>
