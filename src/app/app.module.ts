@@ -9,6 +9,7 @@ import { StatsComponent } from './stats/stats.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LocationApiService } from './location-api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LocationApiService } from './location-api.service';
     BrowserModule,
     AppRoutingModule,
     NgxPaginationModule,
+    HttpClientModule,
     SidebarModule.forRoot()
   ],
   providers: [
