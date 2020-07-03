@@ -1,11 +1,11 @@
 <div class="filters">
 
     <select name="distance" class="filters">
-        <option *ngFor="let info of distances; index as i; trackBy: get_distnaces">{{info}}</option>
+        <option *ngFor="let info of distances;">{{info}}</option>
     </select>
 
     <select name="status" class="filters">
-        <option *ngFor="let info of status; index as i; trackBy: get_status">{{info}}</option>
+        <option *ngFor="let info of status;">{{info}}</option>
     </select>
 
     <select name="clinic_type" class="filters">

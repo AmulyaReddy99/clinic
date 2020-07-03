@@ -1,11 +1,12 @@
 <div>
     <div class="row">
         <div class="col-sm-3" >
-            <!-- list of people -->
-            Rachana
+            <button *ngFor="let info of messages | keyvalue" (click)="set_current_name(info.key)">{{info.key}}</button><br>
         </div>
+
         <div class="col-sm-9">  
             <!-- list of previous messages -->
+            <li *ngFor="let msg of current_message_list">{{msg}}</li>
             <textarea name="message" rows="5"></textarea><br>
             <button class="btn btn-primary">Send</button>
         </div>
